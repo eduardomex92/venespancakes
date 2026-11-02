@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Menu · Vene's Pancake House</title>
+  <meta name="description" content="Breakfast and lunch menu for Vene's Pancake House: pancakes, omelettes, burritos, bowls, favorites and more.">
+  <meta name="theme-color" content="#F5EEE7">
+  <link rel="icon" href="images/logo.webp" type="image/webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#menu">Skip to menu</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <img class="logo" src="images/logo.webp" alt="" width="48" height="56">
+      <div>
+        <h1 class="brand" id="brand-name">Vene's Pancake House</h1>
+        <p class="tagline" id="brand-tagline">Breakfast &amp; lunch menu</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Menu sections">
+    <div class="wrap">
+      <ul class="tab-list" id="tab-list"></ul>
+    </div>
+  </nav>
+
+  <main id="menu" class="wrap" tabindex="-1">
+    <p class="status" id="status">Loading menu…</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Prices and availability subject to change.</p>
+    </div>
+  </footer>
+
+  <a href="#top" class="to-top" id="to-top" aria-label="Back to top" hidden>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </a>
+</body>
+</html>
