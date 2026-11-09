@@ -9,19 +9,68 @@
       "id": "pancakes",
       "tab": "Pancakes",
       "title": "Pancakes",
-      "images": [{ "src": "images/pancakes.webp", "alt": "Stack of pancakes topped with strawberries and caramel" }],
+      "slides": [
+        {
+          "src": "images/hero-pancakes.webp",
+          "alt": "Stack of pancakes topped with strawberries and cheesecake bites"
+        }
+      ],
       "intro": "All pancakes made with buttermilk batter.",
       "items": [
-        { "name": "Buttermilk Pancakes", "desc": "Classic fluffy buttermilk pancakes", "price": "$9.00" },
-        { "name": "Chocolate Pancakes", "desc": "Chocolate chips folded in and on top", "price": "$11.00" },
-        { "name": "Strawberry Pancakes", "desc": "Topped with fresh strawberries & whipped cream", "price": "$11.00" },
-        { "name": "Blueberry Pancakes", "desc": "Filled with blueberries, topped with compote", "price": "$11.00" },
-        { "name": "Banana Pancakes", "desc": "Banana slices baked in, topped with bananas & pecans", "price": "$11.00" },
-        { "name": "Peanut Butter Pancakes", "desc": "Topped with Reese's Pieces & whipped cream", "price": "$11.00" },
-        { "name": "Pecan Pancakes", "desc": "Filled and topped with toasted pecans", "price": "$11.00" },
-        { "name": "Sausage Pancakes", "desc": "Sausage baked inside the pancakes", "price": "$11.00" },
-        { "name": "Bacon Pancakes", "desc": "Crispy bacon baked inside the pancakes", "price": "$11.00" },
-        { "name": "New York Cheesecake Pancake", "desc": "Cheesecake bites inside, topped with strawberries", "price": "$11.00" }
+        {
+          "name": "Buttermilk Pancakes",
+          "desc": "Classic fluffy buttermilk pancakes",
+          "price": "$9.00"
+        },
+        {
+          "name": "Chocolate Pancakes",
+          "desc": "Chocolate chips folded in and on top",
+          "price": "$11.00"
+        },
+        {
+          "name": "Strawberry Pancakes",
+          "desc": "Topped with fresh strawberries & whipped cream",
+          "price": "$11.00"
+        },
+        {
+          "name": "Blueberry Pancakes",
+          "desc": "Filled with blueberries, topped with compote",
+          "price": "$11.00"
+        },
+        {
+          "name": "Banana Pancakes",
+          "desc": "Banana slices baked in, topped with bananas & pecans",
+          "price": "$11.00"
+        },
+        {
+          "name": "Peanut Butter Pancakes",
+          "desc": "Topped with Reese's Pieces & whipped cream",
+          "price": "$11.00"
+        },
+        {
+          "name": "Pecan Pancakes",
+          "desc": "Filled and topped with toasted pecans",
+          "price": "$11.00"
+        },
+        {
+          "name": "Sausage Pancakes",
+          "desc": "Sausage baked inside the pancakes",
+          "price": "$11.00"
+        },
+        {
+          "name": "Bacon Pancakes",
+          "desc": "Crispy bacon baked inside the pancakes",
+          "price": "$11.00"
+        },
+        {
+          "name": "New York Cheesecake Pancake",
+          "desc": "Cheesecake bites inside, topped with strawberries",
+          "price": "$11.00",
+          "image": {
+            "src": "images/thumb-cheesecake-pancake.webp",
+            "alt": "Pancakes with cheesecake bites and strawberries"
+          }
+        }
       ]
     },
     {
@@ -29,109 +78,285 @@
       "tab": "Omelettes",
       "title": "Omelettes",
       "price": "$13.00",
-      "images": [{ "src": "images/omelettes.webp", "alt": "Omelette with avocado and baby red potatoes" }],
+      "slides": [
+        {
+          "src": "images/hero-omelettes.webp",
+          "alt": "Omelette with avocado and baby red potatoes"
+        }
+      ],
       "intro": "Made with 3 eggs. Choice of hash browns, baby red potatoes or fruit, plus toast, two small pancakes or tortillas.",
       "items": [
-        { "name": "Ham", "desc": "Ham, American cheese" },
-        { "name": "Sausage", "desc": "Sausage, American cheese" },
-        { "name": "Bacon", "desc": "Bacon, American cheese" },
-        { "name": "Western", "desc": "Bell pepper, onion, tomato, ham, American cheese" },
-        { "name": "Mexican Chorizo", "desc": "Chorizo, jack & cheddar, tomato, cilantro, avocado" },
-        { "name": "Carnivore", "desc": "Bacon, sausage, ham, jack & cheddar" },
-        { "name": "New Mexico", "desc": "Chicken or steak, jack & cheddar, chipotle sauce, cilantro, avocado" },
-        { "name": "Mediterranean", "desc": "Gyro meat, feta cheese" },
-        { "name": "Florentine", "desc": "Spinach, mushrooms, feta cheese" },
-        { "name": "Dynamite Veggie", "desc": "Spinach, bell pepper, onion, tomato, broccoli, mushrooms, jack & cheddar" }
+        {
+          "name": "Ham",
+          "desc": "Ham, American cheese"
+        },
+        {
+          "name": "Sausage",
+          "desc": "Sausage, American cheese"
+        },
+        {
+          "name": "Bacon",
+          "desc": "Bacon, American cheese"
+        },
+        {
+          "name": "Western",
+          "desc": "Bell pepper, onion, tomato, ham, American cheese"
+        },
+        {
+          "name": "Mexican Chorizo",
+          "desc": "Chorizo, jack & cheddar, tomato, cilantro, avocado"
+        },
+        {
+          "name": "Carnivore",
+          "desc": "Bacon, sausage, ham, jack & cheddar"
+        },
+        {
+          "name": "New Mexico",
+          "desc": "Chicken or steak, jack & cheddar, chipotle sauce, cilantro, avocado"
+        },
+        {
+          "name": "Mediterranean",
+          "desc": "Gyro meat, feta cheese"
+        },
+        {
+          "name": "Florentine",
+          "desc": "Spinach, mushrooms, feta cheese"
+        },
+        {
+          "name": "Dynamite Veggie",
+          "desc": "Spinach, bell pepper, onion, tomato, broccoli, mushrooms, jack & cheddar"
+        }
       ],
-      "notes": ["Upgrade small pancakes to specialty pancakes +$2.50 · Monday specials excluded"]
+      "notes": [
+        "Upgrade small pancakes to specialty pancakes +$2.50 · Monday specials excluded"
+      ]
     },
     {
       "id": "burritos-bowls",
       "tab": "Burritos & Bowls",
       "title": "Burritos & Bowls",
       "price": "$13.00",
-      "images": [
-        { "src": "images/burrito.webp", "alt": "Breakfast burrito with hash browns", "caption": "Burrito" },
-        { "src": "images/bowl.webp", "alt": "Breakfast bowl with eggs and avocado", "caption": "Bowl" }
+      "slides": [
+        {
+          "src": "images/hero-burrito.webp",
+          "alt": "Breakfast burrito with hash browns",
+          "label": "Burrito"
+        },
+        {
+          "src": "images/hero-bowl.webp",
+          "alt": "Breakfast bowl with eggs and avocado",
+          "label": "Bowl"
+        }
       ],
       "intro": "Available as a burrito or bowl. Burritos come with hash browns, baby red potatoes or fruit. Bowls come with hash browns or baby red potatoes, plus toast or two small pancakes.",
       "items": [
-        { "name": "Ham", "desc": "Ham, American cheese, onions, bell pepper" },
-        { "name": "Sausage", "desc": "Sausage, American cheese, onions, bell pepper" },
-        { "name": "Bacon", "desc": "Bacon, American cheese" },
-        { "name": "Western", "desc": "Bell pepper, onion, tomato, ham, American cheese" },
-        { "name": "Mexican Chorizo", "desc": "Chorizo, jack & cheddar, tomato, cilantro, avocado" },
-        { "name": "Carnivore", "desc": "Bacon, sausage, ham, jack & cheddar" },
-        { "name": "New Mexico", "desc": "Chicken or steak, jack & cheddar, chipotle sauce, cilantro, avocado" },
-        { "name": "Mediterranean", "desc": "Gyro meat, bell pepper, onion, feta" },
-        { "name": "Florentine", "desc": "Spinach, mushrooms, feta cheese, onions, bell pepper" },
-        { "name": "Dynamite Veggie", "desc": "Spinach, bell pepper, onion, tomato, broccoli, avocado, mushrooms, jack & cheddar" }
+        {
+          "name": "Ham",
+          "desc": "Ham, American cheese, onions, bell pepper"
+        },
+        {
+          "name": "Sausage",
+          "desc": "Sausage, American cheese, onions, bell pepper"
+        },
+        {
+          "name": "Bacon",
+          "desc": "Bacon, American cheese"
+        },
+        {
+          "name": "Western",
+          "desc": "Bell pepper, onion, tomato, ham, American cheese"
+        },
+        {
+          "name": "Mexican Chorizo",
+          "desc": "Chorizo, jack & cheddar, tomato, cilantro, avocado"
+        },
+        {
+          "name": "Carnivore",
+          "desc": "Bacon, sausage, ham, jack & cheddar"
+        },
+        {
+          "name": "New Mexico",
+          "desc": "Chicken or steak, jack & cheddar, chipotle sauce, cilantro, avocado"
+        },
+        {
+          "name": "Mediterranean",
+          "desc": "Gyro meat, bell pepper, onion, feta"
+        },
+        {
+          "name": "Florentine",
+          "desc": "Spinach, mushrooms, feta cheese, onions, bell pepper"
+        },
+        {
+          "name": "Dynamite Veggie",
+          "desc": "Spinach, bell pepper, onion, tomato, broccoli, avocado, mushrooms, jack & cheddar"
+        }
       ],
-      "notes": ["Upgrade small pancakes to specialty pancakes +$2.50 · Monday specials excluded"]
+      "notes": [
+        "Upgrade small pancakes to specialty pancakes +$2.50 · Monday specials excluded"
+      ]
     },
     {
       "id": "spanish-rice",
       "tab": "Spanish Rice",
       "title": "Spanish Rice Breakfast",
       "price": "$13.00",
-      "images": [{ "src": "images/spanish-rice.webp", "alt": "Spanish rice topped with eggs, avocado and tomato" }],
+      "slides": [
+        {
+          "src": "images/hero-spanish-rice.webp",
+          "alt": "Spanish rice topped with eggs, avocado and tomato"
+        }
+      ],
       "intro": "Rice pilaf with onions, tomato & cilantro, topped with chipotle ranch and two eggs cooked to order. Served with toast, two small pancakes or tortillas. All options include fresh tomato, cilantro & avocado.",
       "items": [
-        { "name": "Ham" },
-        { "name": "Sausage" },
-        { "name": "Bacon" },
-        { "name": "Mexican Chorizo" },
-        { "name": "Western", "desc": "Bell pepper, onion, ham" },
-        { "name": "Carnivore", "desc": "Bacon, sausage, ham" },
-        { "name": "New Mexico", "desc": "Chicken or steak" },
-        { "name": "Mediterranean", "desc": "Gyro meat" },
-        { "name": "Florentine", "desc": "Spinach, mushrooms" },
-        { "name": "Dynamite Veggie", "desc": "Spinach, bell pepper, onion, broccoli, mushrooms" }
+        {
+          "name": "Ham"
+        },
+        {
+          "name": "Sausage"
+        },
+        {
+          "name": "Bacon"
+        },
+        {
+          "name": "Mexican Chorizo"
+        },
+        {
+          "name": "Western",
+          "desc": "Bell pepper, onion, ham"
+        },
+        {
+          "name": "Carnivore",
+          "desc": "Bacon, sausage, ham"
+        },
+        {
+          "name": "New Mexico",
+          "desc": "Chicken or steak"
+        },
+        {
+          "name": "Mediterranean",
+          "desc": "Gyro meat"
+        },
+        {
+          "name": "Florentine",
+          "desc": "Spinach, mushrooms"
+        },
+        {
+          "name": "Dynamite Veggie",
+          "desc": "Spinach, bell pepper, onion, broccoli, mushrooms"
+        }
       ],
-      "notes": ["Upgrade small pancakes to specialty pancakes +$2.50 · Monday specials excluded"]
+      "notes": [
+        "Upgrade small pancakes to specialty pancakes +$2.50 · Monday specials excluded"
+      ]
     },
     {
       "id": "pita",
       "tab": "Pita",
       "title": "Pita Breakfast",
       "price": "$13.00",
-      "images": [{ "src": "images/pita.webp", "alt": "Grilled pita topped with scrambled eggs and avocado" }],
+      "slides": [
+        {
+          "src": "images/hero-pita.webp",
+          "alt": "Grilled pita topped with scrambled eggs and avocado"
+        }
+      ],
       "intro": "Grilled pita with 2 eggs cooked to order, topped with chipotle ranch. Served with hash browns, baby red potatoes or fruit. All options include fresh tomato, cilantro & avocado.",
       "items": [
-        { "name": "Ham", "desc": "Ham, American cheese" },
-        { "name": "Sausage", "desc": "Sausage, American cheese" },
-        { "name": "Bacon", "desc": "Bacon, American cheese" },
-        { "name": "Western", "desc": "Bell pepper, onion, ham, American cheese" },
-        { "name": "Mexican Chorizo", "desc": "Chorizo, jack & cheddar" },
-        { "name": "Carnivore", "desc": "Bacon, sausage, ham, jack & cheddar" },
-        { "name": "New Mexico", "desc": "Chicken or steak, jack & cheddar" },
-        { "name": "Mediterranean", "desc": "Gyro meat, feta" },
-        { "name": "Florentine", "desc": "Spinach, mushrooms, feta" },
-        { "name": "Dynamite Veggie", "desc": "Spinach, bell pepper, onion, broccoli, mushrooms, jack & cheddar" }
+        {
+          "name": "Ham",
+          "desc": "Ham, American cheese"
+        },
+        {
+          "name": "Sausage",
+          "desc": "Sausage, American cheese"
+        },
+        {
+          "name": "Bacon",
+          "desc": "Bacon, American cheese"
+        },
+        {
+          "name": "Western",
+          "desc": "Bell pepper, onion, ham, American cheese"
+        },
+        {
+          "name": "Mexican Chorizo",
+          "desc": "Chorizo, jack & cheddar"
+        },
+        {
+          "name": "Carnivore",
+          "desc": "Bacon, sausage, ham, jack & cheddar"
+        },
+        {
+          "name": "New Mexico",
+          "desc": "Chicken or steak, jack & cheddar"
+        },
+        {
+          "name": "Mediterranean",
+          "desc": "Gyro meat, feta"
+        },
+        {
+          "name": "Florentine",
+          "desc": "Spinach, mushrooms, feta"
+        },
+        {
+          "name": "Dynamite Veggie",
+          "desc": "Spinach, bell pepper, onion, broccoli, mushrooms, jack & cheddar"
+        }
       ]
     },
     {
       "id": "classic",
       "tab": "Classic",
       "title": "Classic Breakfast",
+      "slides": [
+        {
+          "src": "images/hero-eggs.webp",
+          "alt": "Two eggs with bacon and sausage links"
+        }
+      ],
       "groups": [
         {
           "title": "Fresh Eggs",
           "intro": "Served with hash browns, baby red potatoes or fruit. Includes toast or two small pancakes.",
           "items": [
-            { "name": "1 egg any style", "price": "$8.00" },
-            { "name": "2 eggs any style", "price": "$9.00" },
-            { "name": "Add bacon, sausage links or ham", "price": "+$4.00" },
-            { "name": "Add chorizo or gyro", "price": "+$5.00" }
+            {
+              "name": "1 egg any style",
+              "price": "$8.00"
+            },
+            {
+              "name": "2 eggs any style",
+              "price": "$9.00",
+              "image": {
+                "src": "images/thumb-eggs.webp",
+                "alt": "Two eggs with bacon and sausage"
+              }
+            },
+            {
+              "name": "Add bacon, sausage links or ham",
+              "price": "+$4.00"
+            },
+            {
+              "name": "Add chorizo or gyro",
+              "price": "+$5.00"
+            }
           ]
         },
         {
           "title": "Steak & Eggs",
           "intro": "Served with hash browns, baby red potatoes or fruit. Choice of toast or two small pancakes.",
           "items": [
-            { "name": "Chopped Steak (ground beef) 6 oz", "price": "$14.00" },
-            { "name": "Chicken Fried Steak", "price": "$14.00" },
-            { "name": "Ribeye Steak", "price": "$20.00" }
+            {
+              "name": "Chopped Steak (ground beef) 6 oz",
+              "price": "$14.00"
+            },
+            {
+              "name": "Chicken Fried Steak",
+              "price": "$14.00"
+            },
+            {
+              "name": "Ribeye Steak",
+              "price": "$20.00"
+            }
           ]
         },
         {
@@ -139,18 +364,38 @@
           "price": "$11.00",
           "intro": "Served with a thin layer of hash browns. Includes 2 eggs cooked to order. Choice of bacon, sausage, ham, chorizo or gyro.",
           "items": [
-            { "name": "English Muffin", "desc": "Jack & cheddar" },
-            { "name": "Sheboygan Scrambled", "desc": "American cheese" },
-            { "name": "Sheboygan Hard", "desc": "American cheese" },
-            { "name": "Croissant", "desc": "American cheese" }
+            {
+              "name": "English Muffin",
+              "desc": "Jack & cheddar"
+            },
+            {
+              "name": "Sheboygan Scrambled",
+              "desc": "American cheese"
+            },
+            {
+              "name": "Sheboygan Hard",
+              "desc": "American cheese"
+            },
+            {
+              "name": "Croissant",
+              "desc": "American cheese"
+            }
           ]
         },
         {
           "title": "Eggs Benedict",
           "intro": "Served with hash browns, baby red potatoes or fruit.",
           "items": [
-            { "name": "Classic Eggs Benedict", "desc": "2 poached eggs, ham on an English muffin", "price": "$13.00" },
-            { "name": "California Eggs Benedict", "desc": "2 poached eggs, bacon, tomato, avocado on an English muffin", "price": "$14.00" }
+            {
+              "name": "Classic Eggs Benedict",
+              "desc": "2 poached eggs, ham on an English muffin",
+              "price": "$13.00"
+            },
+            {
+              "name": "California Eggs Benedict",
+              "desc": "2 poached eggs, bacon, tomato, avocado on an English muffin",
+              "price": "$14.00"
+            }
           ]
         }
       ]
@@ -160,43 +405,91 @@
       "tab": "Sweet",
       "title": "Vene's Sweet Breakfast",
       "price": "$8.00",
-      "images": [{ "src": "images/sweet-breakfast.webp", "alt": "French toast topped with bananas and caramel" }],
+      "slides": [
+        {
+          "src": "images/hero-french-toast.webp",
+          "alt": "French toast topped with bananas and caramel"
+        }
+      ],
       "groups": [
         {
           "title": "Choose one",
           "items": [
-            { "name": "2 Crepes" },
-            { "name": "2 Pancakes" },
-            { "name": "2 French Toast" },
-            { "name": "2 Cinnamon Swirl French Toast" }
+            {
+              "name": "2 Crepes"
+            },
+            {
+              "name": "2 Pancakes"
+            },
+            {
+              "name": "2 French Toast",
+              "image": {
+                "src": "images/thumb-french-toast.webp",
+                "alt": "French toast with bananas and caramel"
+              }
+            },
+            {
+              "name": "2 Cinnamon Swirl French Toast"
+            }
           ]
         },
         {
           "title": "Add-ons",
           "price": "+$3.00 each",
           "items": [
-            { "name": "Fresh Fruit" },
-            { "name": "Mexican Tres Leches" },
-            { "name": "Ice Cream Scoop" },
-            { "name": "Nutella & Strawberry" },
-            { "name": "Caramel & Banana" },
-            { "name": "Mexican Churros" }
+            {
+              "name": "Fresh Fruit"
+            },
+            {
+              "name": "Mexican Tres Leches"
+            },
+            {
+              "name": "Ice Cream Scoop"
+            },
+            {
+              "name": "Nutella & Strawberry"
+            },
+            {
+              "name": "Caramel & Banana"
+            },
+            {
+              "name": "Mexican Churros"
+            }
           ]
         }
       ],
-      "notes": ["No substitutions"]
+      "notes": [
+        "No substitutions"
+      ]
     },
     {
       "id": "favorites",
       "tab": "Favorites",
       "title": "Vene's Favorites",
-      "images": [{ "src": "images/favorites.webp", "alt": "Biscuits and gravy with a side of eggs, bacon and sausage" }],
+      "slides": [
+        {
+          "src": "images/hero-eggs.webp",
+          "alt": "Deal Breakfast: eggs with bacon and sausage",
+          "label": "Deal Breakfast"
+        },
+        {
+          "src": "images/hero-biscuits.webp",
+          "alt": "Biscuits and gravy",
+          "label": "Biscuits & Gravy"
+        }
+      ],
       "items": [
         {
           "name": "Deal Breakfast",
           "desc": "2 eggs, pancakes or French toast. Choice of bacon, sausage links, ham, chorizo or gyro.",
-          "extra": ["Upgrade to specialty pancakes +$4.00"],
-          "price": "$13.00"
+          "extra": [
+            "Upgrade to specialty pancakes +$4.00"
+          ],
+          "price": "$13.00",
+          "image": {
+            "src": "images/thumb-eggs.webp",
+            "alt": "Eggs with bacon and sausage"
+          }
         },
         {
           "name": "Biscuits & Gravy",
@@ -205,47 +498,113 @@
             "With 2 eggs and meat: 1 biscuit $11.00 · 2 biscuits $12.00",
             "Choice of bacon, sausage links, ham, chorizo or gyro"
           ],
-          "price": "from $8.00"
+          "price": "from $8.00",
+          "image": {
+            "src": "images/thumb-biscuits.webp",
+            "alt": "Biscuits and gravy"
+          }
         },
         {
           "name": "Farmer's Wife Breakfast",
           "desc": "4 scrambled eggs, hash browns or baby red potatoes. Bell peppers, onions, ham, bacon, sausage, jack & cheddar, avocado.",
-          "extra": ["Choice of toast, two small pancakes or tortillas"],
+          "extra": [
+            "Choice of toast, two small pancakes or tortillas"
+          ],
           "price": "$14.00"
         },
         {
           "name": "Vene Deep",
           "desc": "Baby red potatoes topped with jack & cheddar and two eggs cooked to order, with gravy.",
-          "extra": ["Choice of toast, two small pancakes or tortillas"],
+          "extra": [
+            "Choice of toast, two small pancakes or tortillas"
+          ],
           "price": "$12.00"
         },
         {
           "name": "Chilaquiles",
           "desc": "Corn tortilla chips covered in green salsa, 2 eggs cooked to order, topped with onions, cilantro, sour cream and crumbled Mexican cheese.",
-          "extra": ["Add steak, chicken or chorizo +$3.00"],
+          "extra": [
+            "Add steak, chicken or chorizo +$3.00"
+          ],
           "price": "$12.00"
         }
       ],
-      "notes": ["No substitutions"]
+      "notes": [
+        "No substitutions"
+      ]
     },
     {
       "id": "lunch",
       "tab": "Lunch",
       "title": "Lunch Time",
-      "images": [{ "src": "images/lunch.webp", "alt": "Bacon cheeseburger with fries" }],
-      "items": [
-        { "name": "Hamburger or Chicken Breast", "desc": "Served on a bun with lettuce, tomato, pickles & onions", "extra": ["Add cheese +$1.00"], "price": "$9.00" },
-        { "name": "Mid Western Burger", "desc": "Hamburger or chicken breast, bacon, fried onions, American cheese", "price": "$12.00" },
-        { "name": "Mushroom & Swiss Burger", "desc": "Hamburger or chicken breast, mushrooms & Swiss cheese", "price": "$11.00" },
-        { "name": "Patty Melt", "desc": "Hamburger patty, grilled onions, American cheese on grilled pita", "price": "$11.00" },
-        { "name": "BLT Wrap", "desc": "Bacon, lettuce, tomato, mayo, jack & cheddar", "price": "$10.00" },
-        { "name": "Chicken Wrap", "desc": "Cajun chicken breast, lettuce, tomato, onion, jack & cheddar, chipotle mayo", "price": "$11.00" },
-        { "name": "Gyro Wrap", "desc": "Gyro meat, onions, tomato, lettuce, feta", "price": "$10.00" },
-        { "name": "Chicken Gyro Pita", "desc": "Grilled pita, Swiss cheese, onions, lettuce, tomato & chipotle mayo", "price": "$10.00" },
-        { "name": "Chicken or Steak Pita", "desc": "Onions, bell peppers, mushrooms, jack & cheddar", "price": "$11.00" },
-        { "name": "Gyro Sandwich", "desc": "Gyro meat, grilled pita", "price": "$12.00" }
+      "slides": [
+        {
+          "src": "images/hero-burger.webp",
+          "alt": "Bacon cheeseburger with fries"
+        }
       ],
-      "notes": ["No substitutions"]
+      "items": [
+        {
+          "name": "Hamburger or Chicken Breast",
+          "desc": "Served on a bun with lettuce, tomato, pickles & onions",
+          "extra": [
+            "Add cheese +$1.00"
+          ],
+          "price": "$9.00"
+        },
+        {
+          "name": "Mid Western Burger",
+          "desc": "Hamburger or chicken breast, bacon, fried onions, American cheese",
+          "price": "$12.00",
+          "image": {
+            "src": "images/thumb-burger.webp",
+            "alt": "Burger with bacon, fried onions and cheese"
+          }
+        },
+        {
+          "name": "Mushroom & Swiss Burger",
+          "desc": "Hamburger or chicken breast, mushrooms & Swiss cheese",
+          "price": "$11.00"
+        },
+        {
+          "name": "Patty Melt",
+          "desc": "Hamburger patty, grilled onions, American cheese on grilled pita",
+          "price": "$11.00"
+        },
+        {
+          "name": "BLT Wrap",
+          "desc": "Bacon, lettuce, tomato, mayo, jack & cheddar",
+          "price": "$10.00"
+        },
+        {
+          "name": "Chicken Wrap",
+          "desc": "Cajun chicken breast, lettuce, tomato, onion, jack & cheddar, chipotle mayo",
+          "price": "$11.00"
+        },
+        {
+          "name": "Gyro Wrap",
+          "desc": "Gyro meat, onions, tomato, lettuce, feta",
+          "price": "$10.00"
+        },
+        {
+          "name": "Chicken Gyro Pita",
+          "desc": "Grilled pita, Swiss cheese, onions, lettuce, tomato & chipotle mayo",
+          "price": "$10.00"
+        },
+        {
+          "name": "Chicken or Steak Pita",
+          "desc": "Onions, bell peppers, mushrooms, jack & cheddar",
+          "price": "$11.00"
+        },
+        {
+          "name": "Gyro Sandwich",
+          "desc": "Gyro meat, grilled pita",
+          "price": "$12.00"
+        }
+      ],
+      "notes": [
+        "No substitutions"
+      ]
     },
     {
       "id": "kids",
@@ -254,31 +613,75 @@
       "price": "$9.00",
       "intro": "For kids 12 & under.",
       "items": [
-        { "name": "Mini Meal", "desc": "1 egg, 2 bacon or sausage, with hash browns or fruit" },
-        { "name": "Mickey Mouse Pancake", "desc": "With 2 bacon or sausage" },
-        { "name": "French Toast", "desc": "With 2 bacon or sausage" },
-        { "name": "Hamburger & Fries" },
-        { "name": "Cheeseburger & Fries" },
-        { "name": "Grilled Cheese & Fries" },
-        { "name": "Chicken Strips & Fries" }
+        {
+          "name": "Mini Meal",
+          "desc": "1 egg, 2 bacon or sausage, with hash browns or fruit"
+        },
+        {
+          "name": "Mickey Mouse Pancake",
+          "desc": "With 2 bacon or sausage"
+        },
+        {
+          "name": "French Toast",
+          "desc": "With 2 bacon or sausage"
+        },
+        {
+          "name": "Hamburger & Fries"
+        },
+        {
+          "name": "Cheeseburger & Fries"
+        },
+        {
+          "name": "Grilled Cheese & Fries"
+        },
+        {
+          "name": "Chicken Strips & Fries"
+        }
       ]
     },
     {
       "id": "drinks",
       "tab": "Drinks",
       "title": "Beverages & Shakes",
-      "layout": "compact",
       "intro": "Free refills on coffee, iced tea, lemonade & soft drinks.",
+      "layout": "compact",
       "items": [
-        { "name": "Coffee (regular)", "price": "$3.00" },
-        { "name": "Juices: orange, apple, cranberry", "price": "$3.00 / $4.00" },
-        { "name": "Soft Drinks", "price": "$3.00" },
-        { "name": "Pink Lemonade", "price": "$3.00" },
-        { "name": "Hot Tea", "price": "$3.00" },
-        { "name": "Chocolate or White Milk", "price": "$3.00" },
-        { "name": "Hot Chocolate", "price": "$3.00" },
-        { "name": "Unsweetened Iced Tea", "price": "$3.00" },
-        { "name": "Shakes: chocolate, vanilla or strawberry", "price": "$6.00" }
+        {
+          "name": "Coffee (regular)",
+          "price": "$3.00"
+        },
+        {
+          "name": "Juices: orange, apple, cranberry",
+          "price": "$3.00 / $4.00"
+        },
+        {
+          "name": "Soft Drinks",
+          "price": "$3.00"
+        },
+        {
+          "name": "Pink Lemonade",
+          "price": "$3.00"
+        },
+        {
+          "name": "Hot Tea",
+          "price": "$3.00"
+        },
+        {
+          "name": "Chocolate or White Milk",
+          "price": "$3.00"
+        },
+        {
+          "name": "Hot Chocolate",
+          "price": "$3.00"
+        },
+        {
+          "name": "Unsweetened Iced Tea",
+          "price": "$3.00"
+        },
+        {
+          "name": "Shakes: chocolate, vanilla or strawberry",
+          "price": "$6.00"
+        }
       ]
     },
     {
@@ -287,15 +690,42 @@
       "title": "Sides",
       "layout": "compact",
       "items": [
-        { "name": "Hash Browns / Baby Reds", "price": "$4.00" },
-        { "name": "Meat (ham, sausage, bacon)", "price": "$4.50" },
-        { "name": "Toast", "price": "$2.00" },
-        { "name": "Chipotle / Chipotle Ranch", "price": "$2.00" },
-        { "name": "Green Salsa", "price": "$2.00" },
-        { "name": "Sausage Gravy", "price": "$2.50" },
-        { "name": "Hollandaise Sauce", "price": "$2.50" },
-        { "name": "2 Eggs", "price": "$4.00" },
-        { "name": "Fruit", "price": "$3.50" }
+        {
+          "name": "Hash Browns / Baby Reds",
+          "price": "$4.00"
+        },
+        {
+          "name": "Meat (ham, sausage, bacon)",
+          "price": "$4.50"
+        },
+        {
+          "name": "Toast",
+          "price": "$2.00"
+        },
+        {
+          "name": "Chipotle / Chipotle Ranch",
+          "price": "$2.00"
+        },
+        {
+          "name": "Green Salsa",
+          "price": "$2.00"
+        },
+        {
+          "name": "Sausage Gravy",
+          "price": "$2.50"
+        },
+        {
+          "name": "Hollandaise Sauce",
+          "price": "$2.50"
+        },
+        {
+          "name": "2 Eggs",
+          "price": "$4.00"
+        },
+        {
+          "name": "Fruit",
+          "price": "$3.50"
+        }
       ]
     }
   ]

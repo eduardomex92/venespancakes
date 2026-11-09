@@ -24,9 +24,10 @@ Optional fields:
 
 | Field | Where | What it does |
 |---|---|---|
-| `price` | section or group | One shared price shown next to the heading |
+| `price` | section or group | One shared price (a pill on the banner card for sections) |
 | `intro` | section or group | Muted sentence under the heading |
-| `images` | section | Photo band; add `caption` for a label under each photo |
+| `slides` | section | Banner card photos. 2+ photos = swipeable with dots. Each is `{ "src", "alt", "label" }`; `label` is an optional chip on the photo. No slides = a plain brown card |
+| `image` | item | Small square photo next to the dish: `{ "src": "images/thumb-x.webp", "alt": "..." }` |
 | `groups` | section | Sub-lists with their own small heading |
 | `extra` | item | Extra muted lines under the description |
 | `notes` | section | Small italic lines at the end of the section |
@@ -36,9 +37,13 @@ If the page shows "menu could not be loaded" after an edit, the JSON probably ha
 
 ## Adding photos
 
-1. Export from Canva as PNG (transparent background works best).
-2. Convert to WebP, around 600–800px wide (https://squoosh.app works well).
-3. Put the file in `images/` and reference it in `menu.json`.
+1. Export from Canva as PNG.
+2. Size it for where it goes, then convert to WebP at https://squoosh.app:
+   - **Banner slides:** landscape 16:9, about 1200×675, under ~80 KB. The card crops to fill, so keep the food away from the very edges, and leave the bottom-left fairly plain (the title sits there).
+   - **Dish thumbnails:** square, about 240×240. A close crop of the food looks best at that size.
+3. Put the file in `images/` and reference it in `menu.json` (`hero-…` for banners, `thumb-…` for dishes).
+
+The current banners were made from the Canva cutouts by placing each plate on a soft blush background. Real photos of the dishes work just as well.
 
 ## Testing locally
 
