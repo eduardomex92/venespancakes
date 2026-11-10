@@ -31,10 +31,10 @@
      Paste each tab's "Publish to web → CSV" link here (see README).
      Leave them as "" while developing: the copies in data/ are used. */
   const SHEET_URLS = {
-    items: '',
-    categories: '',
-    groups: '',
-    banners: '',
+    items: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRKU5JcRNBlCn1OpLtMNthYQiSVyCS_Fcc1tIHjyO26HAwQdFZenrw36KNAOHclXZplnoDmUXHS3PRY/pub?gid=169005898&single=true&output=csv',
+    categories: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRKU5JcRNBlCn1OpLtMNthYQiSVyCS_Fcc1tIHjyO26HAwQdFZenrw36KNAOHclXZplnoDmUXHS3PRY/pub?gid=78268274&single=true&output=csv',
+    groups: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRKU5JcRNBlCn1OpLtMNthYQiSVyCS_Fcc1tIHjyO26HAwQdFZenrw36KNAOHclXZplnoDmUXHS3PRY/pub?gid=1751099437&single=true&output=csv',
+    banners: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRKU5JcRNBlCn1OpLtMNthYQiSVyCS_Fcc1tIHjyO26HAwQdFZenrw36KNAOHclXZplnoDmUXHS3PRY/pub?gid=1352908352&single=true&output=csv',
   };
 
   // Separator for several lines in one cell ("Add cheese +$1.00 | Choice of toast").
