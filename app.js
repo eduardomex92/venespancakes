@@ -1,18 +1,23 @@
 /* =====================================================================
-   VENE'S PANCAKE HOUSE MENU — APP LOGIC (v2)
+   VENE'S PANCAKE HOUSE MENU — APP LOGIC (v3)
 
    The big picture:
-     1. Download menu.json (all the menu content).
-     2. Build the tab bar and one <section> per category from that data.
-     3. Wire up the behavior: swipeable banner photos, the active tab
+     1. Download the 4 tabs of the Google Sheet as CSV (items, categories,
+        groups, banners). If Google can't be reached, use the copies in data/.
+     2. Turn those flat rows into nested "sections" (BUILD SECTIONS).
+     3. Build the tab bar and one <section> per category.
+     4. Wire up the behavior: swipeable banner photos, the active tab
         while scrolling, and the back-to-top button.
 
-   NEW in v2. Search for these labels to find each part:
+   Search for these labels to find each part:
+     - CONFIG ............. the Google Sheet links go here
+     - LOAD + PARSE ....... downloading and reading the CSV files
+     - BUILD SECTIONS ..... rows → the shape the render code expects
      - BANNER CARDS ....... photo card at the top of each section (swipeable)
      - ITEM PHOTOS ........ optional small photo next to a dish
      - SWIPE DOTS ......... the dots that follow the swipe
 
-   To change prices or dishes, edit menu.json only. This file
+   To change prices or dishes, edit the Google Sheet. This file
    doesn't need to change.
    ===================================================================== */
 
@@ -21,6 +26,19 @@
 // where they could clash with other scripts.
 (function () {
   'use strict'; // stricter JS: typos like undeclared variables throw errors instead of failing silently
+
+  /* ---------- CONFIG ----------
+     Paste each tab's "Publish to web → CSV" link here (see README).
+     Leave them as "" while developing: the copies in data/ are used. */
+  const SHEET_URLS = {
+    items: '',
+    categories: '',
+    groups: '',
+    banners: '',
+  };
+
+  // Separator for several lines in one cell ("Add cheese +$1.00 | Choice of toast").
+  const LINE_SEPARATOR = '|';
 
   // Grab the page elements we need once, up front.
   const main = document.getElementById('menu');
@@ -31,8 +49,8 @@
 
   /* ---------- HELPER ----------
      el('p', 'item-name', 'Ham') → <p class="item-name">Ham</p>
-     We use textContent (never innerHTML) for text from menu.json, so a
-     typo like "<b" in the JSON can never break the page or inject code. */
+     We use textContent (never innerHTML) for text from the sheet, so a
+     typo like "<b" in a cell can never break the page or inject code. */
   function el(tag, className, text) {
     const node = document.createElement(tag);
     if (className) node.className = className;
@@ -43,7 +61,7 @@
 
   /* =====================================================================
      BANNER CARDS
-     A section's "slides" list in menu.json becomes a card made of layers
+     A section's banner photos (banners tab) become a card made of layers
      (the stacking is done in styles.css with position: absolute):
        1. .hero-track   a row of photos you can swipe sideways
        2. ::after       a dark gradient so white text is readable on any photo
@@ -141,7 +159,7 @@
   function renderItem(item) {
     const li = el('li', 'item');
 
-    // ITEM PHOTOS: only dishes with an "image" in menu.json get one.
+    // ITEM PHOTOS: only dishes with an "image" in the sheet get one.
     // The extra class "has-photo" lets the CSS adjust the row layout.
     if (item.image) {
       li.classList.add('has-photo');
@@ -181,7 +199,7 @@
      SECTIONS
      ===================================================================== */
   function renderSection(section, index) {
-    // Drinks and sides use layout: "compact" in menu.json → tighter rows.
+    // Drinks and sides use layout "compact" in the sheet → tighter rows.
     const sec = el('section', 'section' + (section.layout === 'compact' ? ' compact' : ''));
     sec.id = section.id;                                         // what the tab links to (#lunch)
     sec.setAttribute('aria-labelledby', section.id + '-title');  // screen readers announce the title
@@ -286,19 +304,164 @@
 
 
   /* =====================================================================
+     LOAD + PARSE
+     ===================================================================== */
+
+  // Download one CSV file as text. "async" lets us use "await" inside,
+  // which pauses this function (not the page) until the download finishes.
+  async function loadCsv(url) {
+    // no-store: never reuse an old copy, so price changes show up.
+    const res = await fetch(url, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`Download failed for ${url}: HTTP ${res.status}`);
+    return res.text();
+  }
+
+  /* CSV → array of rows, each row an array of cells.
+     We can't just split on commas: a description like "Bacon, lettuce, tomato"
+     is wrapped in quotes in the CSV, and its commas belong to the text.
+     So we read one character at a time and track whether we're inside quotes. */
+  function parseCsv(text) {
+    const rows = [];
+    let row = [];
+    let field = '';
+    let inQuotes = false;
+
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      if (inQuotes) {
+        if (char === '"' && text[i + 1] === '"') { field += '"'; i++; } // "" = a literal quote
+        else if (char === '"') inQuotes = false;                        // closing quote
+        else field += char;                                             // commas/newlines are just text here
+      } else {
+        if (char === '"') inQuotes = true;                               // opening quote
+        else if (char === ',') { row.push(field); field = ''; }          // end of a cell
+        else if (char === '\n') { row.push(field); rows.push(row); row = []; field = ''; } // end of a row
+        else if (char !== '\r') field += char;                           // ignore Windows "\r"
+      }
+    }
+    if (field !== '' || row.length) { row.push(field); rows.push(row); } // last row (no trailing newline)
+    return rows;
+  }
+
+  /* Rows → objects, using row 1 as the keys:
+       ["id","name"], ["lunch-001","BLT Wrap"]  →  { id: "lunch-001", name: "BLT Wrap" }
+     Generic: it works for all 4 tabs because it knows nothing about menus. */
+  function rowsToObjects(rows) {
+    if (rows.length === 0) return [];
+    const headers = rows[0].map(h => h.trim().toLowerCase());
+    return rows.slice(1)
+      .map(values => {
+        const obj = {};
+        headers.forEach((h, i) => { obj[h] = (values[i] || '').trim(); });
+        return obj;
+      })
+      // Skip blank rows (every cell empty), which Sheets often leaves at the end.
+      .filter(obj => Object.values(obj).some(v => v !== ''));
+  }
+
+  // Download and parse all 4 tabs. "source" is either SHEET_URLS or local files.
+  async function loadTables(source) {
+    const names = ['items', 'categories', 'groups', 'banners'];
+    // Promise.all starts all 4 downloads at the same time and waits for all
+    // of them. The results come back in the same order as "names".
+    const texts = await Promise.all(names.map(n => loadCsv(source[n])));
+    const tables = {};
+    names.forEach((n, i) => { tables[n] = rowsToObjects(parseCsv(texts[i])); });
+    return tables;
+  }
+
+
+  /* =====================================================================
+     BUILD SECTIONS
+     The sheet is "flat" (4 separate lists). The render code expects
+     "nested" data: each section holds its slides, items and groups.
+     This function is the bridge (often called an "adapter"), which is why
+     none of the render code had to change when we moved from JSON to Sheets.
+     ===================================================================== */
+
+  // "1" → 1. A blank or typo'd order goes to the end instead of breaking the sort.
+  function orderOf(row) {
+    const n = Number(row.display_order);
+    return Number.isFinite(n) && row.display_order !== '' ? n : Infinity;
+  }
+  // .sort() changes the array; [...list] sorts a copy instead.
+  function byOrder(list) {
+    return [...list].sort((a, b) => orderOf(a) - orderOf(b));
+  }
+  // "Add cheese +$1.00 | Choice of toast" → ["Add cheese +$1.00", "Choice of toast"]
+  function splitLines(text) {
+    return (text || '').split(LINE_SEPARATOR).map(s => s.trim()).filter(Boolean);
+  }
+  // A Sheets checkbox exports as TRUE / FALSE. Only an explicit FALSE hides a
+  // dish, so a row where someone forgot the checkbox still shows.
+  function isAvailable(item) {
+    return (item.available || '').toUpperCase() !== 'FALSE';
+  }
+
+  // One sheet row → the item shape renderItem() uses.
+  function toItem(row) {
+    return {
+      name: row.name,
+      desc: row.description,
+      price: row.price,
+      extra: splitLines(row.extra),
+      image: row.image ? { src: row.image, alt: row.image_alt } : null,
+    };
+  }
+
+  function buildSections(tables) {
+    const items = byOrder(tables.items).filter(it => it.name && isAvailable(it));
+
+    return byOrder(tables.categories)
+      .filter(cat => cat.id)
+      .map(cat => {
+        // Everything that belongs to this category, matched by its id.
+        const mine = list => list.filter(row => row.category_id === cat.id);
+        const catItems = mine(items);
+
+        // Groups listed in the groups tab, each holding the items whose
+        // "group" cell matches its name.
+        const groups = byOrder(mine(tables.groups))
+          .map(g => ({
+            title: g.group,
+            price: g.price,
+            intro: g.intro,
+            items: catItems.filter(it => it.group === g.group).map(toItem),
+          }))
+          .filter(g => g.items.length > 0);   // hide a group if all its dishes are hidden
+
+        return {
+          id: cat.id,
+          tab: cat.tab,
+          title: cat.title || cat.id,
+          price: cat.price,
+          intro: cat.intro,
+          notes: splitLines(cat.notes),
+          layout: cat.layout,
+          slides: byOrder(mine(tables.banners))
+            .filter(b => b.image)
+            .map(b => ({ src: b.image, alt: b.alt, label: b.label })),
+          // Dishes with no group, or with a group name that isn't in the
+          // groups tab (a typo), are listed straight under the section,
+          // so a typo never makes a dish disappear.
+          items: catItems
+            .filter(it => !groups.some(g => g.title === it.group))
+            .map(toItem),
+          groups,
+        };
+      })
+      // Skip a section with nothing in it (e.g. every dish unticked).
+      .filter(s => s.items.length > 0 || s.groups.length > 0);
+  }
+
+
+  /* =====================================================================
      START
      ===================================================================== */
-  function render(data) {
-    const r = data.restaurant || {};
-    if (r.name) {
-      document.getElementById('brand-name').textContent = r.name;
-      document.title = 'Menu · ' + r.name;
-    }
-    if (r.tagline) document.getElementById('brand-tagline').textContent = r.tagline;
-
+  function render(sections) {
     statusEl.remove();   // remove "Loading menu…"
-    renderTabs(data.sections);
-    data.sections.forEach((s, i) => main.append(renderSection(s, i)));
+    renderTabs(sections);
+    sections.forEach((s, i) => main.append(renderSection(s, i)));
 
     // Listeners can only be attached to elements that exist, so these run
     // AFTER the sections are on the page.
@@ -313,19 +476,38 @@
     }
   }
 
-  // fetch() returns a Promise: .then runs when the download finishes,
-  // .catch runs if anything along the way throws an error.
-  fetch('menu.json', { cache: 'no-cache' })   // no-cache: always check for a newer menu.json
-    .then(res => {
-      if (!res.ok) throw new Error('HTTP ' + res.status);   // e.g. 404 if the file is missing
-      return res.json();                                    // parse the text into a JS object
-    })
-    .then(render)
-    .catch(err => {
-      console.error('Could not load menu.json:', err);
-      // Opening index.html by double-click uses file://, where browsers block fetch().
-      statusEl.textContent = location.protocol === 'file:'
-        ? 'Open this page through a local server (e.g. VS Code Live Server). Browsers block menu.json when the file is opened directly.'
-        : 'Sorry, the menu could not be loaded. Please refresh the page.';
-    });
+  const LOCAL_FILES = {
+    items: 'data/items.csv',
+    categories: 'data/categories.csv',
+    groups: 'data/groups.csv',
+    banners: 'data/banners.csv',
+  };
+
+  async function start() {
+    // Use the sheet only if ALL 4 links were pasted in.
+    const useSheet = Object.values(SHEET_URLS).every(url => url !== '');
+    let tables;
+
+    // try/catch: if anything inside "try" throws (no internet, Google down,
+    // a tab unpublished), we jump to "catch" instead of crashing.
+    try {
+      tables = await loadTables(useSheet ? SHEET_URLS : LOCAL_FILES);
+    } catch (err) {
+      if (!useSheet) throw err;   // local files failed too: nothing to fall back to
+      // FALLBACK: Google failed, so show the copy in data/. It may be a
+      // little out of date, but a slightly old menu beats an empty page.
+      console.warn('Google Sheet unavailable, using local copy:', err);
+      tables = await loadTables(LOCAL_FILES);
+    }
+    render(buildSections(tables));
+  }
+
+  // start() returns a Promise; .catch handles any error it didn't handle itself.
+  start().catch(err => {
+    console.error('Could not load the menu:', err);
+    // Opening index.html by double-click uses file://, where browsers block fetch().
+    statusEl.textContent = location.protocol === 'file:'
+      ? 'Open this page through a local server (e.g. VS Code Live Server). Browsers block the menu files when the page is opened directly.'
+      : 'Sorry, the menu could not be loaded. Please refresh the page.';
+  });
 })();

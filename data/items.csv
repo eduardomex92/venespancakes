@@ -1,0 +1,114 @@
+id,category_id,group,name,description,price,extra,image,image_alt,available,display_order
+pancakes-001,pancakes,,Buttermilk Pancakes,Classic fluffy buttermilk pancakes,$9.00,,,,TRUE,1
+pancakes-002,pancakes,,Chocolate Pancakes,Chocolate chips folded in and on top,$11.00,,,,TRUE,2
+pancakes-003,pancakes,,Strawberry Pancakes,Topped with fresh strawberries & whipped cream,$11.00,,,,TRUE,3
+pancakes-004,pancakes,,Blueberry Pancakes,"Filled with blueberries, topped with compote",$11.00,,,,TRUE,4
+pancakes-005,pancakes,,Banana Pancakes,"Banana slices baked in, topped with bananas & pecans",$11.00,,,,TRUE,5
+pancakes-006,pancakes,,Peanut Butter Pancakes,Topped with Reese's Pieces & whipped cream,$11.00,,,,TRUE,6
+pancakes-007,pancakes,,Pecan Pancakes,Filled and topped with toasted pecans,$11.00,,,,TRUE,7
+pancakes-008,pancakes,,Sausage Pancakes,Sausage baked inside the pancakes,$11.00,,,,TRUE,8
+pancakes-009,pancakes,,Bacon Pancakes,Crispy bacon baked inside the pancakes,$11.00,,,,TRUE,9
+pancakes-010,pancakes,,New York Cheesecake Pancake,"Cheesecake bites inside, topped with strawberries",$11.00,,images/thumb-cheesecake-pancake.webp,Pancakes with cheesecake bites and strawberries,TRUE,10
+omelettes-001,omelettes,,Ham,"Ham, American cheese",,,,,TRUE,1
+omelettes-002,omelettes,,Sausage,"Sausage, American cheese",,,,,TRUE,2
+omelettes-003,omelettes,,Bacon,"Bacon, American cheese",,,,,TRUE,3
+omelettes-004,omelettes,,Western,"Bell pepper, onion, tomato, ham, American cheese",,,,,TRUE,4
+omelettes-005,omelettes,,Mexican Chorizo,"Chorizo, jack & cheddar, tomato, cilantro, avocado",,,,,TRUE,5
+omelettes-006,omelettes,,Carnivore,"Bacon, sausage, ham, jack & cheddar",,,,,TRUE,6
+omelettes-007,omelettes,,New Mexico,"Chicken or steak, jack & cheddar, chipotle sauce, cilantro, avocado",,,,,TRUE,7
+omelettes-008,omelettes,,Mediterranean,"Gyro meat, feta cheese",,,,,TRUE,8
+omelettes-009,omelettes,,Florentine,"Spinach, mushrooms, feta cheese",,,,,TRUE,9
+omelettes-010,omelettes,,Dynamite Veggie,"Spinach, bell pepper, onion, tomato, broccoli, mushrooms, jack & cheddar",,,,,TRUE,10
+burritos-bowls-001,burritos-bowls,,Ham,"Ham, American cheese, onions, bell pepper",,,,,TRUE,1
+burritos-bowls-002,burritos-bowls,,Sausage,"Sausage, American cheese, onions, bell pepper",,,,,TRUE,2
+burritos-bowls-003,burritos-bowls,,Bacon,"Bacon, American cheese",,,,,TRUE,3
+burritos-bowls-004,burritos-bowls,,Western,"Bell pepper, onion, tomato, ham, American cheese",,,,,TRUE,4
+burritos-bowls-005,burritos-bowls,,Mexican Chorizo,"Chorizo, jack & cheddar, tomato, cilantro, avocado",,,,,TRUE,5
+burritos-bowls-006,burritos-bowls,,Carnivore,"Bacon, sausage, ham, jack & cheddar",,,,,TRUE,6
+burritos-bowls-007,burritos-bowls,,New Mexico,"Chicken or steak, jack & cheddar, chipotle sauce, cilantro, avocado",,,,,TRUE,7
+burritos-bowls-008,burritos-bowls,,Mediterranean,"Gyro meat, bell pepper, onion, feta",,,,,TRUE,8
+burritos-bowls-009,burritos-bowls,,Florentine,"Spinach, mushrooms, feta cheese, onions, bell pepper",,,,,TRUE,9
+burritos-bowls-010,burritos-bowls,,Dynamite Veggie,"Spinach, bell pepper, onion, tomato, broccoli, avocado, mushrooms, jack & cheddar",,,,,TRUE,10
+spanish-rice-001,spanish-rice,,Ham,,,,,,TRUE,1
+spanish-rice-002,spanish-rice,,Sausage,,,,,,TRUE,2
+spanish-rice-003,spanish-rice,,Bacon,,,,,,TRUE,3
+spanish-rice-004,spanish-rice,,Mexican Chorizo,,,,,,TRUE,4
+spanish-rice-005,spanish-rice,,Western,"Bell pepper, onion, ham",,,,,TRUE,5
+spanish-rice-006,spanish-rice,,Carnivore,"Bacon, sausage, ham",,,,,TRUE,6
+spanish-rice-007,spanish-rice,,New Mexico,Chicken or steak,,,,,TRUE,7
+spanish-rice-008,spanish-rice,,Mediterranean,Gyro meat,,,,,TRUE,8
+spanish-rice-009,spanish-rice,,Florentine,"Spinach, mushrooms",,,,,TRUE,9
+spanish-rice-010,spanish-rice,,Dynamite Veggie,"Spinach, bell pepper, onion, broccoli, mushrooms",,,,,TRUE,10
+pita-001,pita,,Ham,"Ham, American cheese",,,,,TRUE,1
+pita-002,pita,,Sausage,"Sausage, American cheese",,,,,TRUE,2
+pita-003,pita,,Bacon,"Bacon, American cheese",,,,,TRUE,3
+pita-004,pita,,Western,"Bell pepper, onion, ham, American cheese",,,,,TRUE,4
+pita-005,pita,,Mexican Chorizo,"Chorizo, jack & cheddar",,,,,TRUE,5
+pita-006,pita,,Carnivore,"Bacon, sausage, ham, jack & cheddar",,,,,TRUE,6
+pita-007,pita,,New Mexico,"Chicken or steak, jack & cheddar",,,,,TRUE,7
+pita-008,pita,,Mediterranean,"Gyro meat, feta",,,,,TRUE,8
+pita-009,pita,,Florentine,"Spinach, mushrooms, feta",,,,,TRUE,9
+pita-010,pita,,Dynamite Veggie,"Spinach, bell pepper, onion, broccoli, mushrooms, jack & cheddar",,,,,TRUE,10
+classic-001,classic,Fresh Eggs,1 egg any style,,$8.00,,,,TRUE,1
+classic-002,classic,Fresh Eggs,2 eggs any style,,$9.00,,images/thumb-eggs.webp,Two eggs with bacon and sausage,TRUE,2
+classic-003,classic,Fresh Eggs,"Add bacon, sausage links or ham",,+$4.00,,,,TRUE,3
+classic-004,classic,Fresh Eggs,Add chorizo or gyro,,+$5.00,,,,TRUE,4
+classic-005,classic,Steak & Eggs,Chopped Steak (ground beef) 6 oz,,$14.00,,,,TRUE,5
+classic-006,classic,Steak & Eggs,Chicken Fried Steak,,$14.00,,,,TRUE,6
+classic-007,classic,Steak & Eggs,Ribeye Steak,,$20.00,,,,TRUE,7
+classic-008,classic,Breakfast Sandwiches,English Muffin,Jack & cheddar,,,,,TRUE,8
+classic-009,classic,Breakfast Sandwiches,Sheboygan Scrambled,American cheese,,,,,TRUE,9
+classic-010,classic,Breakfast Sandwiches,Sheboygan Hard,American cheese,,,,,TRUE,10
+classic-011,classic,Breakfast Sandwiches,Croissant,American cheese,,,,,TRUE,11
+classic-012,classic,Eggs Benedict,Classic Eggs Benedict,"2 poached eggs, ham on an English muffin",$13.00,,,,TRUE,12
+classic-013,classic,Eggs Benedict,California Eggs Benedict,"2 poached eggs, bacon, tomato, avocado on an English muffin",$14.00,,,,TRUE,13
+sweet-001,sweet,Choose one,2 Crepes,,,,,,TRUE,1
+sweet-002,sweet,Choose one,2 Pancakes,,,,,,TRUE,2
+sweet-003,sweet,Choose one,2 French Toast,,,,images/thumb-french-toast.webp,French toast with bananas and caramel,TRUE,3
+sweet-004,sweet,Choose one,2 Cinnamon Swirl French Toast,,,,,,TRUE,4
+sweet-005,sweet,Add-ons,Fresh Fruit,,,,,,TRUE,5
+sweet-006,sweet,Add-ons,Mexican Tres Leches,,,,,,TRUE,6
+sweet-007,sweet,Add-ons,Ice Cream Scoop,,,,,,TRUE,7
+sweet-008,sweet,Add-ons,Nutella & Strawberry,,,,,,TRUE,8
+sweet-009,sweet,Add-ons,Caramel & Banana,,,,,,TRUE,9
+sweet-010,sweet,Add-ons,Mexican Churros,,,,,,TRUE,10
+favorites-001,favorites,,Deal Breakfast,"2 eggs, pancakes or French toast. Choice of bacon, sausage links, ham, chorizo or gyro.",$13.00,Upgrade to specialty pancakes +$4.00,images/thumb-eggs.webp,Eggs with bacon and sausage,TRUE,1
+favorites-002,favorites,,Biscuits & Gravy,1 biscuit $8.00 · 2 biscuits $9.00,from $8.00,"With 2 eggs and meat: 1 biscuit $11.00 · 2 biscuits $12.00 | Choice of bacon, sausage links, ham, chorizo or gyro",images/thumb-biscuits.webp,Biscuits and gravy,TRUE,2
+favorites-003,favorites,,Farmer's Wife Breakfast,"4 scrambled eggs, hash browns or baby red potatoes. Bell peppers, onions, ham, bacon, sausage, jack & cheddar, avocado.",$14.00,"Choice of toast, two small pancakes or tortillas",,,TRUE,3
+favorites-004,favorites,,Vene Deep,"Baby red potatoes topped with jack & cheddar and two eggs cooked to order, with gravy.",$12.00,"Choice of toast, two small pancakes or tortillas",,,TRUE,4
+favorites-005,favorites,,Chilaquiles,"Corn tortilla chips covered in green salsa, 2 eggs cooked to order, topped with onions, cilantro, sour cream and crumbled Mexican cheese.",$12.00,"Add steak, chicken or chorizo +$3.00",,,TRUE,5
+lunch-001,lunch,,Hamburger or Chicken Breast,"Served on a bun with lettuce, tomato, pickles & onions",$9.00,Add cheese +$1.00,,,TRUE,1
+lunch-002,lunch,,Mid Western Burger,"Hamburger or chicken breast, bacon, fried onions, American cheese",$12.00,,images/thumb-burger.webp,"Burger with bacon, fried onions and cheese",TRUE,2
+lunch-003,lunch,,Mushroom & Swiss Burger,"Hamburger or chicken breast, mushrooms & Swiss cheese",$11.00,,,,TRUE,3
+lunch-004,lunch,,Patty Melt,"Hamburger patty, grilled onions, American cheese on grilled pita",$11.00,,,,TRUE,4
+lunch-005,lunch,,BLT Wrap,"Bacon, lettuce, tomato, mayo, jack & cheddar",$10.00,,,,TRUE,5
+lunch-006,lunch,,Chicken Wrap,"Cajun chicken breast, lettuce, tomato, onion, jack & cheddar, chipotle mayo",$11.00,,,,TRUE,6
+lunch-007,lunch,,Gyro Wrap,"Gyro meat, onions, tomato, lettuce, feta",$10.00,,,,TRUE,7
+lunch-008,lunch,,Chicken Gyro Pita,"Grilled pita, Swiss cheese, onions, lettuce, tomato & chipotle mayo",$10.00,,,,TRUE,8
+lunch-009,lunch,,Chicken or Steak Pita,"Onions, bell peppers, mushrooms, jack & cheddar",$11.00,,,,TRUE,9
+lunch-010,lunch,,Gyro Sandwich,"Gyro meat, grilled pita",$12.00,,,,TRUE,10
+kids-001,kids,,Mini Meal,"1 egg, 2 bacon or sausage, with hash browns or fruit",,,,,TRUE,1
+kids-002,kids,,Mickey Mouse Pancake,With 2 bacon or sausage,,,,,TRUE,2
+kids-003,kids,,French Toast,With 2 bacon or sausage,,,,,TRUE,3
+kids-004,kids,,Hamburger & Fries,,,,,,TRUE,4
+kids-005,kids,,Cheeseburger & Fries,,,,,,TRUE,5
+kids-006,kids,,Grilled Cheese & Fries,,,,,,TRUE,6
+kids-007,kids,,Chicken Strips & Fries,,,,,,TRUE,7
+drinks-001,drinks,,Coffee (regular),,$3.00,,,,TRUE,1
+drinks-002,drinks,,"Juices: orange, apple, cranberry",,$3.00 / $4.00,,,,TRUE,2
+drinks-003,drinks,,Soft Drinks,,$3.00,,,,TRUE,3
+drinks-004,drinks,,Pink Lemonade,,$3.00,,,,TRUE,4
+drinks-005,drinks,,Hot Tea,,$3.00,,,,TRUE,5
+drinks-006,drinks,,Chocolate or White Milk,,$3.00,,,,TRUE,6
+drinks-007,drinks,,Hot Chocolate,,$3.00,,,,TRUE,7
+drinks-008,drinks,,Unsweetened Iced Tea,,$3.00,,,,TRUE,8
+drinks-009,drinks,,"Shakes: chocolate, vanilla or strawberry",,$6.00,,,,TRUE,9
+sides-001,sides,,Hash Browns / Baby Reds,,$4.00,,,,TRUE,1
+sides-002,sides,,"Meat (ham, sausage, bacon)",,$4.50,,,,TRUE,2
+sides-003,sides,,Toast,,$2.00,,,,TRUE,3
+sides-004,sides,,Chipotle / Chipotle Ranch,,$2.00,,,,TRUE,4
+sides-005,sides,,Green Salsa,,$2.00,,,,TRUE,5
+sides-006,sides,,Sausage Gravy,,$2.50,,,,TRUE,6
+sides-007,sides,,Hollandaise Sauce,,$2.50,,,,TRUE,7
+sides-008,sides,,2 Eggs,,$4.00,,,,TRUE,8
+sides-009,sides,,Fruit,,$3.50,,,,TRUE,9

@@ -1,0 +1,12 @@
+category_id,image,alt,label,display_order
+pancakes,images/hero-pancakes.webp,Stack of pancakes topped with strawberries and cheesecake bites,,1
+omelettes,images/hero-omelettes.webp,Omelette with avocado and baby red potatoes,,1
+burritos-bowls,images/hero-burrito.webp,Breakfast burrito with hash browns,Burrito,1
+burritos-bowls,images/hero-bowl.webp,Breakfast bowl with eggs and avocado,Bowl,2
+spanish-rice,images/hero-spanish-rice.webp,"Spanish rice topped with eggs, avocado and tomato",,1
+pita,images/hero-pita.webp,Grilled pita topped with scrambled eggs and avocado,,1
+classic,images/hero-eggs.webp,Two eggs with bacon and sausage links,,1
+sweet,images/hero-french-toast.webp,French toast topped with bananas and caramel,,1
+favorites,images/hero-eggs.webp,Deal Breakfast: eggs with bacon and sausage,Deal Breakfast,1
+favorites,images/hero-biscuits.webp,Biscuits and gravy,Biscuits & Gravy,2
+lunch,images/hero-burger.webp,Bacon cheeseburger with fries,,1

@@ -1,0 +1,13 @@
+id,tab,title,price,intro,notes,layout,display_order
+pancakes,Pancakes,Pancakes,,All pancakes made with buttermilk batter.,,,1
+omelettes,Omelettes,Omelettes,$13.00,"Made with 3 eggs. Choice of hash browns, baby red potatoes or fruit, plus toast, two small pancakes or tortillas.",Upgrade small pancakes to specialty pancakes +$2.50 · Monday specials excluded,,2
+burritos-bowls,Burritos & Bowls,Burritos & Bowls,$13.00,"Available as a burrito or bowl. Burritos come with hash browns, baby red potatoes or fruit. Bowls come with hash browns or baby red potatoes, plus toast or two small pancakes.",Upgrade small pancakes to specialty pancakes +$2.50 · Monday specials excluded,,3
+spanish-rice,Spanish Rice,Spanish Rice Breakfast,$13.00,"Rice pilaf with onions, tomato & cilantro, topped with chipotle ranch and two eggs cooked to order. Served with toast, two small pancakes or tortillas. All options include fresh tomato, cilantro & avocado.",Upgrade small pancakes to specialty pancakes +$2.50 · Monday specials excluded,,4
+pita,Pita,Pita Breakfast,$13.00,"Grilled pita with 2 eggs cooked to order, topped with chipotle ranch. Served with hash browns, baby red potatoes or fruit. All options include fresh tomato, cilantro & avocado.",,,5
+classic,Classic,Classic Breakfast,,,,,6
+sweet,Sweet,Vene's Sweet Breakfast,$8.00,,No substitutions,,7
+favorites,Favorites,Vene's Favorites,,,No substitutions,,8
+lunch,Lunch,Lunch Time,,,No substitutions,,9
+kids,Kids,Kids Menu,$9.00,For kids 12 & under.,,,10
+drinks,Drinks,Beverages & Shakes,,"Free refills on coffee, iced tea, lemonade & soft drinks.",,compact,11
+sides,Sides,Sides,,,,compact,12

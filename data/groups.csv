@@ -1,0 +1,7 @@
+category_id,group,price,intro,display_order
+classic,Fresh Eggs,,"Served with hash browns, baby red potatoes or fruit. Includes toast or two small pancakes.",1
+classic,Steak & Eggs,,"Served with hash browns, baby red potatoes or fruit. Choice of toast or two small pancakes.",2
+classic,Breakfast Sandwiches,$11.00,"Served with a thin layer of hash browns. Includes 2 eggs cooked to order. Choice of bacon, sausage, ham, chorizo or gyro.",3
+classic,Eggs Benedict,,"Served with hash browns, baby red potatoes or fruit.",4
+sweet,Choose one,,,1
+sweet,Add-ons,+$3.00 each,,2
